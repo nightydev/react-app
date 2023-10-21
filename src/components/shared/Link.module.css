@@ -1,0 +1,7 @@
+.link {
+  @apply flex items-center px-4 h-xl hover:bg-gray-200;
+}
+
+.text {
+  @apply ml-2 text-sm font-semibold;
+}
