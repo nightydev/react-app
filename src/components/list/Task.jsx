@@ -1,6 +1,6 @@
 import styles from "./Task.module.css";
 
-function Task({ icon, event, period, details, finished, taskT }) {
+export default function Task({ icon, event, period, details, finished, taskT }) {
 
   return (
     <div className={styles.task + " card"}>
@@ -21,5 +21,3 @@ function Task({ icon, event, period, details, finished, taskT }) {
     </div>
   )
 }
-
-export default Task

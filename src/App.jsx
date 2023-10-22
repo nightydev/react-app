@@ -1,5 +1,6 @@
 import "./App.css";
 import List from "./components/list/List";
+import Details from "./components/new/Details";
 import Content from "./components/shared/Content";
 import Footer from "./components/shared/Footer";
 import Header from "./components/shared/Header";
@@ -9,7 +10,7 @@ export default function App() {
     <div>
       <Header></Header>
       <Content>
-        <List></List>
+        <Details></Details>
       </Content>
       <Footer></Footer>
     </div>
