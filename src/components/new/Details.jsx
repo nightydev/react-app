@@ -19,10 +19,12 @@ export default function Details() {
   }
 
   const create = async () => {
-    console.log(form)
+    for (let i in form) {
+      console.log(i + " = " + form[i])
+    }
   }
 
-  const optionsFrecuency = ["día", "semana", "mes", "año"]
+  const options = ["día", "semana", "mes", "año"]
   const icons = ["💻", "🏃", "📚", "✈️", "💵"]
   return (
     <div className="card">
@@ -36,7 +38,7 @@ export default function Details() {
           <div className="flex mb-6">
             <input type="number" className="input mr-6" value={events} onChange={e => onChange(e, "events")} />
             <select className="input" value={time} onChange={e => onChange(e, "time")} >
-              {optionsFrecuency.map(option => <option value={option}>{option}</option>)}
+              {options.map(option => <option value={option}>{option}</option>)}
             </select>
           </div>
         </label>

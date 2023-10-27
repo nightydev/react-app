@@ -10,7 +10,7 @@ export default function App() {
     <div>
       <Header></Header>
       <Content>
-        <Details></Details>
+        <Details />
       </Content>
       <Footer></Footer>
     </div>
