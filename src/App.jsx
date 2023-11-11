@@ -1,18 +1,19 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Layout from "./components/shared/Layout";
 import List from "./components/list/List";
-import Details from "./components/new/Details";
-import Content from "./components/shared/Content";
-import Footer from "./components/shared/Footer";
-import Header from "./components/shared/Header";
+import Details from "./components/new/Details"
+import NotFounded from "./components/shared/notFounded";
 
 export default function App() {
   return (
-    <div>
-      <Header></Header>
-      <Content>
-        <Details />
-      </Content>
-      <Footer></Footer>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<List />} />
+        <Route path="/list" element={<List />} />
+        <Route path="/create" element={<Details />} />
+      </Route>
+      <Route path="*" element={<NotFounded />} />
+    </Routes>
   )
 }
